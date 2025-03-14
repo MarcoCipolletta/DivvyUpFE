@@ -3,12 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { tokenInterceptor } from './auth/token.interceptor';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [provideHttpClient()],
+  providers: [provideHttpClient(withInterceptors([tokenInterceptor]))],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

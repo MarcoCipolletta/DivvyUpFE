@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { AuthComponent } from './auth.component';
+import { LoginOauthSuccessComponent } from './login-oauth-success/login-oauth-success.component';
 
 
 @NgModule({
   declarations: [
-    AuthComponent
+    AuthComponent,
+    LoginOauthSuccessComponent
   ],
   imports: [
     CommonModule,
