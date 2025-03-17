@@ -10,6 +10,6 @@ export class AppComponent {
   constructor(private toggleDarkSvc: ToggleDarkService) {}
 
   toggleDark() {
-    this.toggleDarkSvc.toggleDark();
+    this.toggleDarkSvc.toggleTheme();
   }
 }
