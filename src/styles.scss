@@ -1,1 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-ciao: #f70ad4;
+  --font-rock: "Rock Salt", cursive;
+}
+
+@layer base {
+  h1 {
+    @apply text-ciao font-rock;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-amber-800 border border-gray-800 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-4;
+  }
+}
+
+@utility flex-center {
+  @apply flex justify-center items-center;
+}
