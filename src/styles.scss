@@ -20,6 +20,22 @@
   --color-seaGreen: var(--seaGreen);
   --font-montserrat: var(--montserrat);
   --font-roboto: var(--roboto);
+
+  --shadow-basicBtn: 1px 1px 10px;
+
+  --animate-ripple: ripple 1s linear forwards;
+  @keyframes ripple {
+    0% {
+      width: 0px;
+      height: 0px;
+      opacity: 0.3;
+    }
+    100% {
+      width: 500px;
+      height: 500px;
+      opacity: 0;
+    }
+  }
 }
 
 @layer base {

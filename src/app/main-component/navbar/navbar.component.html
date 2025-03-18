@@ -1,12 +1,17 @@
-<nav class="bg-snow dark:bg-jet border-gray-200">
-  <div
-    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
-  >
-    <a href="#" class="hidden dark:flex-center">
-      <img src="Logo-dark.svg" class="h-12" alt="DivvyUp Logo" />
-    </a>
-    <a href="#" class="dark:hidden flex-center">
-      <img src="Logo-light.svg" class="h-15" alt="DivvyUp Logo" />
-    </a>
+<nav class="bg-snow dark:bg-dark border-b-3 border-jet">
+  <div class="flex flex-wrap items-center justify-between mx-auto p-4">
+    <div>
+      <a href="#" class="hidden dark:flex-center">
+        <img src="Logo-dark.svg" class="h-12" alt="DivvyUp Logo" />
+      </a>
+      <a href="#" class="dark:hidden flex-center">
+        <img src="Logo-light.svg" class="h-12" alt="DivvyUp Logo" />
+      </a>
+    </div>
+    <div>
+      <span
+        ><app-basic-button text="Login" routerLink="/auth"></app-basic-button
+      ></span>
+    </div>
   </div>
 </nav>
