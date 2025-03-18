@@ -22,6 +22,8 @@
   --font-roboto: var(--roboto);
 
   --shadow-basicBtn: 1px 1px 10px;
+  --drop-shadow-basicLight: 0px 0px 7px var(--color-dark);
+  --drop-shadow-basicDark: 0px 0px 7px var(--color-snow);
 
   --animate-ripple: ripple 1s linear forwards;
   @keyframes ripple {
