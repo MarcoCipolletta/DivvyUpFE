@@ -1,23 +1,39 @@
-@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 @import "tailwindcss";
+
+:root {
+  --dark: #010400ff;
+  --jet: #282b27ff;
+  --snow: #fffbfcff;
+  --seaGreen: #09814aff;
+  --montserrat: "Montserrat", sans-serif;
+  --roboto: "Roboto", sans-serif;
+}
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-ciao: #f70ad4;
-  --font-rock: "Rock Salt", cursive;
+  --color-dark: var(--dark);
+  --color-jet: var(--jet);
+  --color-snow: var(--snow);
+  --color-seaGreen: var(--seaGreen);
+  --font-montserrat: var(--montserrat);
+  --font-roboto: var(--roboto);
 }
 
 @layer base {
   h1 {
-    @apply text-ciao font-rock;
+    @apply text-seaGreen font-montserrat;
+  }
+  body {
+    @apply bg-snow dark:bg-dark;
   }
 }
 
 @layer components {
   .card {
-    @apply bg-amber-800 border border-gray-800 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-4;
+    @apply bg-amber-800 border border-gray-800 rounded-lg shadow;
   }
 }
 
