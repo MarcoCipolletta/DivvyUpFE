@@ -12,7 +12,7 @@ export class NavbarComponent {
   get currentTheme() {
     return this.toggleDarkSvc.theme;
   }
-  toggleDark() {
+  toggleTheme() {
     this.toggleDarkSvc.toggleTheme();
   }
 }
