@@ -41,9 +41,18 @@
 }
 
 @layer base {
-  h1 {
-    @apply text-seaGreen font-montserrat;
+  * {
+    @apply font-roboto;
   }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-montserrat;
+  }
+
   body {
     @apply bg-snow dark:bg-dark;
   }
@@ -57,4 +66,7 @@
 
 @utility flex-center {
   @apply flex justify-center items-center;
+}
+@utility flex-col-center {
+  @apply flex flex-col justify-center items-center;
 }
