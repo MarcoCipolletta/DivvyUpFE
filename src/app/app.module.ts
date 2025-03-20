@@ -8,7 +8,7 @@ import { tokenInterceptor } from './auth/token.interceptor';
 import { NavbarComponent } from './main-component/navbar/navbar.component';
 import { ButtonsModule } from './shared/buttons/buttons.module';
 import { NgIconsModule } from '@ng-icons/core';
-import { iconoirSettings } from '@ng-icons/iconoir';
+import { iconoirSearch, iconoirSettings } from '@ng-icons/iconoir';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent],
@@ -16,7 +16,7 @@ import { iconoirSettings } from '@ng-icons/iconoir';
     BrowserModule,
     AppRoutingModule,
     ButtonsModule,
-    NgIconsModule.withIcons({ iconoirSettings }),
+    NgIconsModule.withIcons({ iconoirSettings, iconoirSearch }),
   ],
   providers: [provideHttpClient(withInterceptors([tokenInterceptor]))],
   bootstrap: [AppComponent],
