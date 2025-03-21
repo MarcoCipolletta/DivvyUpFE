@@ -1,4 +1,5 @@
 .hero {
+  height: calc((var(--vh) * 100) - 67px);
   z-index: 1;
   background: transparent;
   &::before {
@@ -11,9 +12,8 @@
 
     background-image: url("/market.svg");
     background-position: center;
-    // background-repeat: no-repeat;
     background-size: 15%;
 
-    z-index: -1; /* Abbassi l’opacità solo dello sfondo */
+    z-index: -1;
   }
 }
