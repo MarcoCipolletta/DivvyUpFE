@@ -16,6 +16,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/landing/landing.module').then((m) => m.LandingModule),
   },
+  { path: 'info', loadChildren: () => import('./pages/info/info.module').then(m => m.InfoModule) },
 ];
 
 @NgModule({

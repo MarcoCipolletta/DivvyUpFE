@@ -5,13 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { tokenInterceptor } from './auth/token.interceptor';
-import { NavbarComponent } from './main-component/navbar/navbar.component';
 import { ButtonsModule } from './shared/buttons/buttons.module';
 import { NgIconsModule } from '@ng-icons/core';
 import { iconoirSearch, iconoirSettings } from '@ng-icons/iconoir';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

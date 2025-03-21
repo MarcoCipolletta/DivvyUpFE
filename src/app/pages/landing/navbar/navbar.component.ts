@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ToggleDarkService } from '../../services/toggle-dark.service';
+import { ToggleDarkService } from '../../../services/toggle-dark.service';
 
 @Component({
   selector: 'app-navbar',

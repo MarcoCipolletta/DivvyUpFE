@@ -1,5 +1,4 @@
 .hero {
-  height: calc((var(--vh) * 100) - 67px);
   z-index: 1;
   background: transparent;
   &::before {
