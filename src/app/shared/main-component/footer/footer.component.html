@@ -2,15 +2,15 @@
   class="flex justify-between px-3 py-5 border-t-3 border-jet dark:text-snow"
 >
   <div class="flex space-x-3">
-    <a href="">Termini</a>
+    <a routerLink="/info/terms">{{ "footer.term" | translate }}</a>
     <span> | </span>
-    <a href="">Privacy</a>
+    <a routerLink="/info/privacy">{{ "footer.privacy" | translate }}</a>
     <span> | </span>
-    <a href="">Contatti</a>
+    <a routerLink="/info/terms">{{ "footer.contacts" | translate }}</a>
   </div>
   <div class="text-end">
-    <button>It</button>
+    <button (click)="setLanguage('it')">It</button>
     <span> | </span>
-    <button>En</button>
+    <button (click)="setLanguage('en')">En</button>
   </div>
 </div>

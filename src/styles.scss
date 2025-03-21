@@ -63,6 +63,9 @@
     @apply bg-amber-800 border border-gray-800 rounded-lg shadow;
   }
 }
+@utility hScreen {
+  @apply h-[calc(var(--vh)*100)];
+}
 
 @utility flex-center {
   @apply flex justify-center items-center;
@@ -72,5 +75,11 @@
 }
 
 @utility terms {
-  @apply text-2xl font-medium;
+  @apply text-2xl font-medium dark:text-snow;
+}
+@utility hTerms {
+  @apply text-center text-3xl font-bold my-5 dark:text-snow;
+}
+@utility pTerms {
+  @apply dark:text-snow/80;
 }

@@ -1,0 +1,29 @@
+{
+  "terms": {
+    "title": "Termini di Servizio",
+    "intro": {
+      "title": "Introduzione",
+      "paragraph": "Accedendo alla nostra app, accetti automaticamente i presenti Termini di Servizio. L'app è pensata per gestire e dividere facilmente le spese tra più persone."
+    },
+    "account": {
+      "title": "Registrazione e account",
+      "paragraph": "Ogni utente è responsabile dei dati forniti in fase di registrazione e del mantenimento della riservatezza delle proprie credenziali."
+    },
+    "conditions": {
+      "title": "Condizioni d’uso",
+      "paragraph": "Gli utenti sono tenuti a utilizzare l'app in modo corretto, evitando comportamenti dannosi o fraudolenti."
+    },
+    "responsability": {
+      "title": "Limitazioni di responsabilità",
+      "paragraph": "Non siamo responsabili per eventuali perdite finanziarie o dispute tra utenti derivanti dall'uso improprio dell'app."
+    },
+    "changes": {
+      "title": "Modifiche ai termini",
+      "paragraph": "Ci riserviamo il diritto di modificare questi termini. Gli utenti verranno informati tramite aggiornamenti nell'app stessa."
+    },
+    "law": {
+      "title": "Legge applicabile e controversie",
+      "paragraph": "I presenti termini sono regolati dalla legge italiana."
+    }
+  }
+}

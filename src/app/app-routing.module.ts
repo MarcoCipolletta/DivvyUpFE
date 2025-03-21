@@ -16,11 +16,19 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/landing/landing.module').then((m) => m.LandingModule),
   },
-  { path: 'info', loadChildren: () => import('./pages/info/info.module').then(m => m.InfoModule) },
+  {
+    path: 'info',
+    loadChildren: () =>
+      import('./pages/info/info.module').then((m) => m.InfoModule),
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'top', // <-- Aggiungi questa opzione
+    }),
+  ],
   providers: [],
   exports: [RouterModule],
 })

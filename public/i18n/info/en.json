@@ -1,0 +1,30 @@
+{
+  "terms": {
+    "title": "Terms of Service",
+    "intro": {
+      "title": "Introduction",
+      "paragraph": "By accessing our app, you automatically agree to these Terms of Service. The app is designed to easily manage and split expenses among multiple people."
+    },
+    "account": {
+      "title": "Registration and Account",
+      "paragraph": "Each user is responsible for the information provided during registration and for maintaining the confidentiality of their credentials."
+    },
+    "conditions": {
+      "title": "Terms of Use",
+      "paragraph": "Users must use the app appropriately, avoiding harmful or fraudulent behavior."
+    },
+    "responsability": {
+      "title": "Limitation of Liability",
+      "paragraph": "We are not responsible for any financial losses or disputes between users resulting from misuse of the app."
+    },
+    "changes": {
+      "title": "Changes to the Terms",
+      "paragraph": "We reserve the right to modify these terms. Users will be informed through updates within the app."
+    },
+    "law": {
+      "title": "Governing Law and Disputes",
+      "paragraph": "These terms are governed by Italian law."
+    }
+  },
+  "privacy": {}
+}

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ToggleDarkService } from './services/toggle-dark.service';
+import { LanguageService } from './services/translate/language.service';
+import { AuthService } from './auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +9,20 @@ import { ToggleDarkService } from './services/toggle-dark.service';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  constructor(private toggleDarkSvc: ToggleDarkService) {
+  constructor(
+    private toggleDarkSvc: ToggleDarkService,
+    private languageSvc: LanguageService,
+    private authService: AuthService
+  ) {
     window.addEventListener('resize', this.setViewPort);
     this.setViewPort();
+  }
+
+  ngOnInit() {
+    // imposto qui il base url di authSvc per non andare in dipendenza circolare
+    this.languageSvc.baseUrl$.subscribe((url) => {
+      this.authService.setBaseUrl(url + 'auth/');
+    });
   }
 
   toggleDark() {

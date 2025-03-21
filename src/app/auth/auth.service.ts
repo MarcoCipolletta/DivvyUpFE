@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { LanguageService } from '../services/language.service';
+import { LanguageService } from '../services/translate/language.service';
 import { HttpClient } from '@angular/common/http';
 import { iLoginRequest } from './interfaces/i-login-request';
 import { iAuthResponse } from './interfaces/i-auth-response';
@@ -17,15 +17,19 @@ export class AuthService {
   isLogged$ = new BehaviorSubject<boolean>(false);
 
   constructor(
-    private langSvc: LanguageService,
+    // private langSvc: LanguageService,
     private http: HttpClient,
     private route: ActivatedRoute
   ) {
-    this.langSvc.baseUrl$.subscribe((url) => (this.baseUrl = url + 'auth/'));
+    // this.langSvc.baseUrl$.subscribe((url) => (this.baseUrl = url + 'auth/'));
 
     this.accessUser$.subscribe((user) => {
       this.isLogged$.next(!!user);
     });
+  }
+
+  setBaseUrl(url: string) {
+    this.baseUrl = url;
   }
 
   login(request: iLoginRequest) {
