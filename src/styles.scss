@@ -70,3 +70,7 @@
 @utility flex-col-center {
   @apply flex flex-col justify-center items-center;
 }
+
+@utility terms {
+  @apply text-2xl font-medium;
+}

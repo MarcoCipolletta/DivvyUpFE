@@ -5,11 +5,16 @@ import { LandingRoutingModule } from './landing-routing.module';
 import { LandingComponent } from './landing.component';
 import { ButtonsModule } from '../../shared/buttons/buttons.module';
 import { NgIcon } from '@ng-icons/core';
-import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
+import { MainComponentsModule } from '../../shared/main-component/main-components.module';
 
 @NgModule({
-  declarations: [LandingComponent, NavbarComponent, FooterComponent],
-  imports: [CommonModule, LandingRoutingModule, ButtonsModule, NgIcon],
+  declarations: [LandingComponent],
+  imports: [
+    CommonModule,
+    LandingRoutingModule,
+    ButtonsModule,
+    NgIcon,
+    MainComponentsModule,
+  ],
 })
 export class LandingModule {}
