@@ -6,17 +6,13 @@ import { Injectable } from '@angular/core';
 export class ToggleDarkService {
   constructor() {
     const themeSaved = localStorage.getItem('theme');
-
-    if (
-      (themeSaved && themeSaved === 'dark') ||
+    this.theme =
+      themeSaved === 'dark' ||
       (!themeSaved && window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      this.theme = 'dark';
-      this.setTheme();
-    } else {
-      this.theme = 'light';
-      this.setTheme();
-    }
+        ? 'dark'
+        : 'light';
+
+    this.setTheme();
   }
 
   theme: string;
@@ -31,11 +27,8 @@ export class ToggleDarkService {
   }
 
   toggleTheme() {
-    if (this.theme === 'dark') {
-      this.theme = 'light';
-    } else {
-      this.theme = 'dark';
-    }
+    this.theme = this.theme === 'dark' ? 'light' : 'dark';
+
     this.setTheme();
   }
 }
