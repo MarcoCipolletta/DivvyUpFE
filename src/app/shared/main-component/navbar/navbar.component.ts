@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ToggleDarkService } from '../../../services/toggle-dark.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -7,8 +8,28 @@ import { ToggleDarkService } from '../../../services/toggle-dark.service';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  constructor(private toggleDarkSvc: ToggleDarkService) {}
+  constructor(
+    private toggleDarkSvc: ToggleDarkService,
+    private route: Router
+  ) {}
 
+  private getRoute(): boolean {
+    return this.route.url === '/auth';
+  }
+
+  get text() {
+    if (this.getRoute()) {
+      return 'Home';
+    }
+    return 'Login';
+  }
+
+  get link() {
+    if (this.getRoute()) {
+      return '';
+    }
+    return '/auth';
+  }
   get currentTheme() {
     return this.toggleDarkSvc.theme;
   }

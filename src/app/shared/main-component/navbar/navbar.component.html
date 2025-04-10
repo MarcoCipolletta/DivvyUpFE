@@ -10,7 +10,7 @@
     </div>
     <div class="space-x-3 flex h-full items-center">
       <span
-        ><app-basic-button text="Login" routerLink="/auth"></app-basic-button
+        ><app-basic-button [text]="text" [routerLink]="link"></app-basic-button
       ></span>
       <span (click)="toggleTheme()" class="cursor-pointer relative">
         <!-- moon -->
