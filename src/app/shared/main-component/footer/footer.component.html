@@ -1,16 +1,16 @@
-<div
-  class="flex justify-between px-3 py-5 border-t-3 border-jet dark:text-snow"
->
-  <div class="flex space-x-3">
-    <a routerLink="/info/terms">{{ "footer.term" | translate }}</a>
-    <span> | </span>
-    <a routerLink="/info/privacy">{{ "footer.privacy" | translate }}</a>
-    <span> | </span>
-    <a routerLink="/info/terms">{{ "footer.contacts" | translate }}</a>
-  </div>
-  <div class="text-end">
-    <button class="cursor-pointer" (click)="setLanguage('it')">It</button>
-    <span> | </span>
-    <button class="cursor-pointer" (click)="setLanguage('en')">En</button>
+<div class="border-t-3 border-jet bg-snow dark:bg-dark relative z-10">
+  <div class="container mx-auto flex justify-between px-3 py-5 dark:text-snow">
+    <div class="flex space-x-3">
+      <a routerLink="/info/terms">{{ "footer.term" | translate }}</a>
+      <span> | </span>
+      <a routerLink="/info/privacy">{{ "footer.privacy" | translate }}</a>
+      <span> | </span>
+      <a routerLink="/info/terms">{{ "footer.contacts" | translate }}</a>
+    </div>
+    <div class="text-end">
+      <button class="cursor-pointer" (click)="setLanguage('it')">It</button>
+      <span> | </span>
+      <button class="cursor-pointer" (click)="setLanguage('en')">En</button>
+    </div>
   </div>
 </div>
