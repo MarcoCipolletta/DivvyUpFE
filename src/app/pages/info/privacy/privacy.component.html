@@ -1,42 +1,12 @@
-<h1 class="hTerms">🔒 Privacy Policy</h1>
+@if(translate){
+<h1 class="hTerms">{{ translate.title }}</h1>
 
-<div class="px-3 py-5">
-  <h3 class="terms">Tipi di dati raccolti</h3>
+<div class="px-4 py-5">
+  @for (section of translate.sections;track section.heading){
+  <h3 class="terms">{{ section.heading }}</h3>
   <p class="pTerms">
-    Raccogliamo dati personali essenziali per il funzionamento dell'app come
-    nome, email e informazioni relative alla divisione delle spese.
+    {{ section.content }}
   </p>
-
-  <h3 class="terms">Modalità di utilizzo dei dati</h3>
-  <p class="pTerms">
-    Utilizziamo i dati raccolti esclusivamente per fornire e migliorare il
-    servizio offerto dall'app.
-  </p>
-
-  <h3 class="terms">Condivisione dei dati</h3>
-  <p class="pTerms">
-    I dati personali non vengono condivisi con terze parti, salvo obblighi
-    legali.
-  </p>
-
-  <h3 class="terms">Cookie</h3>
-  <p class="pTerms">
-    Utilizziamo solo cookie tecnici necessari al funzionamento e
-    all'autenticazione nell'app.
-  </p>
-  <h3 class="terms">Diritti dell’utente</h3>
-  <p class="pTerms">
-    Ogni utente può richiedere accesso, rettifica o cancellazione dei propri
-    dati personali inviandoci una richiesta tramite email.
-  </p>
-  <h3 class="terms">Sicurezza</h3>
-  <p class="pTerms">
-    Adottiamo misure tecniche e organizzative adeguate a garantire la sicurezza
-    e la riservatezza dei dati personali raccolti.
-  </p>
-  <h3 class="terms">Modifiche alla privacy policy</h3>
-  <p class="pTerms">
-    Eventuali modifiche saranno comunicate tempestivamente agli utenti tramite
-    notifiche nell'app.
-  </p>
+  }
 </div>
+}

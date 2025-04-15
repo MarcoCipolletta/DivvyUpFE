@@ -1,29 +1,12 @@
-<h1 class="hTerms">📄 {{ "terms.title" | translate }}</h1>
+@if (translate){
+<h1 class="hTerms">{{ translate.title }}</h1>
 
 <div class="px-3 py-5">
-  <h3 class="terms">{{ "terms.intro.title" | translate }}</h3>
+  @for (section of translate.sections;track section.heading){
+  <h3 class="terms">{{ section.heading }}</h3>
   <p class="pTerms">
-    {{ "terms.intro.paragraph" | translate }}
+    {{ section.content }}
   </p>
-
-  <h3 class="terms">{{ "terms.account.title" | translate }}</h3>
-  <p class="pTerms">
-    {{ "terms.account.paragraph" | translate }}
-  </p>
-
-  <h3 class="terms">{{ "terms.conditions.title" | translate }}</h3>
-  <p class="pTerms">
-    {{ "terms.conditions.paragraph" | translate }}
-  </p>
-
-  <h3 class="terms">{{ "terms.responsability.title" | translate }}</h3>
-  <p class="pTerms">
-    {{ "terms.responsability.paragraph" | translate }}
-  </p>
-  <h3 class="terms">{{ "terms.changes.title" | translate }}</h3>
-  <p class="pTerms">
-    {{ "terms.changes.paragraph" | translate }}
-  </p>
-  <h3 class="terms">{{ "terms.law.title" | translate }}</h3>
-  <p class="pTerms">{{ "terms.law.paragraph" | translate }}</p>
+  }
 </div>
+}

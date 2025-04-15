@@ -1,29 +1,66 @@
 {
-  "terms": {
-    "title": "Termini di Servizio",
-    "intro": {
-      "title": "Introduzione",
-      "paragraph": "Accedendo alla nostra app, accetti automaticamente i presenti Termini di Servizio. L'app è pensata per gestire e dividere facilmente le spese tra più persone."
+  "info": {
+    "terms": {
+      "title": "📝 Termini di Servizio",
+      "sections": [
+        {
+          "heading": "Introduzione",
+          "content": "Accedendo alla nostra app, accetti automaticamente i presenti Termini di Servizio. L'app è pensata per gestire e dividere facilmente le spese tra più persone."
+        },
+        {
+          "heading": "Registrazione e account",
+          "content": "Ogni utente è responsabile dei dati forniti in fase di registrazione e del mantenimento della riservatezza delle proprie credenziali."
+        },
+        {
+          "heading": "Condizioni d’uso",
+          "content": "Gli utenti sono tenuti a utilizzare l'app in modo corretto, evitando comportamenti dannosi o fraudolenti."
+        },
+        {
+          "heading": "Limitazioni di responsabilità",
+          "content": "Non siamo responsabili per eventuali perdite finanziarie o dispute tra utenti derivanti dall'uso improprio dell'app."
+        },
+        {
+          "heading": "Modifiche ai termini",
+          "content": "Ci riserviamo il diritto di modificare questi termini. Gli utenti verranno informati tramite aggiornamenti nell'app stessa."
+        },
+        {
+          "heading": "Legge applicabile e controversie",
+          "content": "I presenti termini sono regolati dalla legge italiana."
+        }
+      ]
     },
-    "account": {
-      "title": "Registrazione e account",
-      "paragraph": "Ogni utente è responsabile dei dati forniti in fase di registrazione e del mantenimento della riservatezza delle proprie credenziali."
-    },
-    "conditions": {
-      "title": "Condizioni d’uso",
-      "paragraph": "Gli utenti sono tenuti a utilizzare l'app in modo corretto, evitando comportamenti dannosi o fraudolenti."
-    },
-    "responsability": {
-      "title": "Limitazioni di responsabilità",
-      "paragraph": "Non siamo responsabili per eventuali perdite finanziarie o dispute tra utenti derivanti dall'uso improprio dell'app."
-    },
-    "changes": {
-      "title": "Modifiche ai termini",
-      "paragraph": "Ci riserviamo il diritto di modificare questi termini. Gli utenti verranno informati tramite aggiornamenti nell'app stessa."
-    },
-    "law": {
-      "title": "Legge applicabile e controversie",
-      "paragraph": "I presenti termini sono regolati dalla legge italiana."
+    "privacy": {
+      "title": "🔒 Privacy Policy",
+      "sections": [
+        {
+          "heading": "Tipi di dati raccolti",
+          "content": "Raccogliamo dati personali essenziali per il funzionamento dell'app come nome, email e informazioni relative alla divisione delle spese."
+        },
+        {
+          "heading": "Modalità di utilizzo dei dati",
+          "content": "Utilizziamo i dati raccolti esclusivamente per fornire e migliorare il servizio offerto dall'app."
+        },
+        {
+          "heading": "Condivisione dei dati",
+          "content": "I dati personali non vengono condivisi con terze parti, salvo obblighi legali."
+        },
+        {
+          "heading": "Cookie",
+          "content": "Utilizziamo solo cookie tecnici necessari al funzionamento e all'autenticazione nell'app."
+        },
+        {
+          "heading": "Diritti dell’utente",
+          "content": "Ogni utente può richiedere accesso, rettifica o cancellazione dei propri dati personali inviandoci una richiesta tramite email."
+        },
+        {
+          "heading": "Sicurezza",
+          "content": "Adottiamo misure tecniche e organizzative adeguate a garantire la sicurezza e la riservatezza dei dati personali raccolti."
+        },
+        {
+          "heading": "Modifiche alla privacy policy",
+          "content": "Eventuali modifiche saranno comunicate tempestivamente agli utenti tramite notifiche nell'app."
+        }
+      ]
     }
   }
 }

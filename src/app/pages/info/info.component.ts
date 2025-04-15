@@ -6,8 +6,4 @@ import { InfoTranslateService } from './info-translate.service';
   templateUrl: './info.component.html',
   styleUrl: './info.component.scss',
 })
-export class InfoComponent {
-  constructor(private infoTranslateSvc: InfoTranslateService) {
-    this.infoTranslateSvc.loadTranslations();
-  }
-}
+export class InfoComponent {}

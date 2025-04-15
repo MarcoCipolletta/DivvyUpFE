@@ -1,30 +1,66 @@
 {
-  "terms": {
-    "title": "Terms of Service",
-    "intro": {
-      "title": "Introduction",
-      "paragraph": "By accessing our app, you automatically agree to these Terms of Service. The app is designed to easily manage and split expenses among multiple people."
+  "info": {
+    "terms": {
+      "title": "📝 Terms of Service",
+      "sections": [
+        {
+          "heading": "Introduction",
+          "content": "By accessing our app, you automatically agree to these Terms of Service. The app is designed to help manage and split expenses easily among multiple people."
+        },
+        {
+          "heading": "Registration and Account",
+          "content": "Each user is responsible for the information provided during registration and for keeping their login credentials confidential."
+        },
+        {
+          "heading": "Conditions of Use",
+          "content": "Users must use the app properly and avoid any harmful or fraudulent behavior."
+        },
+        {
+          "heading": "Limitation of Liability",
+          "content": "We are not responsible for any financial losses or disputes between users resulting from misuse of the app."
+        },
+        {
+          "heading": "Changes to the Terms",
+          "content": "We reserve the right to modify these terms. Users will be notified through updates within the app."
+        },
+        {
+          "heading": "Governing Law and Disputes",
+          "content": "These terms are governed by Italian law."
+        }
+      ]
     },
-    "account": {
-      "title": "Registration and Account",
-      "paragraph": "Each user is responsible for the information provided during registration and for maintaining the confidentiality of their credentials."
-    },
-    "conditions": {
-      "title": "Terms of Use",
-      "paragraph": "Users must use the app appropriately, avoiding harmful or fraudulent behavior."
-    },
-    "responsability": {
-      "title": "Limitation of Liability",
-      "paragraph": "We are not responsible for any financial losses or disputes between users resulting from misuse of the app."
-    },
-    "changes": {
-      "title": "Changes to the Terms",
-      "paragraph": "We reserve the right to modify these terms. Users will be informed through updates within the app."
-    },
-    "law": {
-      "title": "Governing Law and Disputes",
-      "paragraph": "These terms are governed by Italian law."
+    "privacy": {
+      "title": "🔒 Privacy Policy",
+      "sections": [
+        {
+          "heading": "Types of Data Collected",
+          "content": "We collect essential personal data needed for the app to function, such as name, email, and information related to expense sharing."
+        },
+        {
+          "heading": "How Data is Used",
+          "content": "The data collected is used solely to provide and improve the service offered by the app."
+        },
+        {
+          "heading": "Data Sharing",
+          "content": "Personal data is not shared with third parties, except when required by law."
+        },
+        {
+          "heading": "Cookies",
+          "content": "We use only technical cookies necessary for the app's operation and user authentication."
+        },
+        {
+          "heading": "User Rights",
+          "content": "Each user may request access to, correction, or deletion of their personal data by sending us a request via email."
+        },
+        {
+          "heading": "Security",
+          "content": "We implement appropriate technical and organizational measures to ensure the security and confidentiality of the personal data collected."
+        },
+        {
+          "heading": "Changes to the Privacy Policy",
+          "content": "Any changes will be promptly communicated to users through in-app notifications."
+        }
+      ]
     }
-  },
-  "privacy": {}
+  }
 }

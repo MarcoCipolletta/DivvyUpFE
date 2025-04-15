@@ -1,37 +1,33 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
-import { Subscription } from 'rxjs';
+import { TranslateService } from '@ngx-translate/core';
+
+import { GenericTranslateService } from '../../services/translate/generic-translate.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class InfoTranslateService {
-  private langChangeSubscription: Subscription;
-
-  constructor(private translate: TranslateService, private http: HttpClient) {
-    // Sottoscrizione al cambio di lingua
-    this.langChangeSubscription = this.translate.onLangChange.subscribe(
-      (event: LangChangeEvent) => {
-        this.loadTranslationsForLang(event.lang);
-      }
-    );
+export class InfoTranslateService extends GenericTranslateService<Info> {
+  constructor(translate: TranslateService, http: HttpClient) {
+    super(translate, http, 'info', 'info');
   }
+}
 
-  loadTranslations() {
-    const lang = this.translate.currentLang || this.translate.getDefaultLang();
-    this.loadTranslationsForLang(lang);
-  }
+export interface iInfo {
+  info: Info;
+}
 
-  private loadTranslationsForLang(lang: string) {
-    this.http.get(`./i18n/info/${lang}.json`).subscribe((translations: any) => {
-      this.translate.setTranslation(lang, translations, true);
-    });
-  }
+export interface Info {
+  terms: Terms;
+  privacy: Terms;
+}
 
-  ngOnDestroy() {
-    if (this.langChangeSubscription) {
-      this.langChangeSubscription.unsubscribe();
-    }
-  }
+export interface Terms {
+  title: string;
+  sections: Section[];
+}
+
+export interface Section {
+  heading: string;
+  content: string;
 }
