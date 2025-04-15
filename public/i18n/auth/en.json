@@ -1,0 +1,18 @@
+{
+  "auth": {
+    "login": {
+      "h2": "Welcome Back!",
+      "sub-title": "Please enter your login details",
+      "identifier": "Username or Email",
+      "enter": "Sing in",
+      "or": "or",
+      "google": "Sing in with Google",
+      "remember": "Remember me",
+      "forgot": "Forgot password?",
+      "not-register": {
+        "title": "Don't have an account yet?",
+        "link": "Register now"
+      }
+    }
+  }
+}

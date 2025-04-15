@@ -9,7 +9,12 @@ import { MainComponentsModule } from '../shared/main-component/main-components.m
 import { LoginComponent } from './login/login.component';
 
 @NgModule({
-  declarations: [AuthComponent, LoginOauthSuccessComponent, RegisterComponent, LoginComponent],
+  declarations: [
+    AuthComponent,
+    LoginOauthSuccessComponent,
+    RegisterComponent,
+    LoginComponent,
+  ],
   imports: [CommonModule, AuthRoutingModule, MainComponentsModule],
 })
 export class AuthModule {}

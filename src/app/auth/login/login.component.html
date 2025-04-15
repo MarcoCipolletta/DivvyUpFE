@@ -1,5 +1,20 @@
+@if(translation){
 <div class="flex items-center justify-center h-full">
-  <div>
-    <h2></h2>
+  <div class="bg-white p-5 rounded-2xl text-dark shadow-xl flex flex-col">
+    <h2 class="text-2xl text-center">
+      {{ translation.h2 | uppercase }}
+    </h2>
+    <p class="text-center">
+      {{ translation["sub-title"] }}
+    </p>
+    <form>
+      <div class="flex flex-col">
+        <label for="identifier">
+          {{ translation.identifier }}
+        </label>
+        <input type="text" id="identifier" class="" />
+      </div>
+    </form>
   </div>
 </div>
+}

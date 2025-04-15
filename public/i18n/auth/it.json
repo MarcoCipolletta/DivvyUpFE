@@ -1,0 +1,18 @@
+{
+  "auth": {
+    "login": {
+      "h2": "Bentornato!",
+      "sub-title": "Inserisci le tue credenziali sotto",
+      "identifier": "Username o Email",
+      "enter": "Accedi",
+      "or": "o",
+      "google": "Accedi con Google",
+      "remember": "Ricordami",
+      "forgot": "Hai dimenticato la password?",
+      "not-register": {
+        "title": "Non hai ancora un account?",
+        "link": "Registrati ora"
+      }
+    }
+  }
+}
