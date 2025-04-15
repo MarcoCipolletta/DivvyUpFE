@@ -10,71 +10,14 @@ import {
   of,
   tap,
 } from 'rxjs';
+import { GenericTranslateService } from '../services/translate/generic-translate.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class AuthTranslateService implements OnDestroy {
-  private langChangeSubscription: Subscription;
-  translations$ = new BehaviorSubject<iAuth | null>(null);
-
-  constructor(private translate: TranslateService, private http: HttpClient) {
-    this.loadTranslations().subscribe();
-
-    this.langChangeSubscription = this.translate.onLangChange.subscribe(
-      (event: LangChangeEvent) => {
-        this.loadTranslations(event.lang).subscribe({
-          next: (translations) => {
-            this.translations$.next(translations);
-          },
-          error: (err) => {
-            console.error(
-              `Errore nel caricamento delle traduzioni per ${event.lang}:`,
-              err
-            );
-          },
-        });
-      }
-    );
-  }
-
-  loadTranslations(changedLang?: string): Observable<iAuth> {
-    const lang =
-      changedLang ||
-      this.translate.currentLang ||
-      this.translate.getDefaultLang();
-
-    return this.loadTranslationsForLang(lang).pipe(
-      catchError((error) => {
-        console.error(`Errore nel caricamento delle traduzioni:`, error);
-        return of(this.translations$.getValue() || ({} as iAuth));
-      })
-    );
-  }
-
-  private loadTranslationsForLang(lang: string): Observable<iAuth> {
-    return this.http.get<{ auth: iAuth }>(`./i18n/auth/${lang}.json`).pipe(
-      tap((data: { auth: iAuth }) => {
-        this.translate.setTranslation(lang, data, true);
-
-        if (this.translate.currentLang !== lang) {
-          this.translate.use(lang);
-        }
-
-        this.translations$.next(data.auth);
-      }),
-      map(() => this.getTranslations())
-    );
-  }
-
-  private getTranslations(): iAuth {
-    return this.translate.instant('auth') as iAuth;
-  }
-
-  ngOnDestroy() {
-    if (this.langChangeSubscription) {
-      this.langChangeSubscription.unsubscribe();
-    }
+export class AuthTranslateService extends GenericTranslateService<iAuth> {
+  constructor(translate: TranslateService, http: HttpClient) {
+    super(translate, http, 'auth', 'auth');
   }
 }
 
