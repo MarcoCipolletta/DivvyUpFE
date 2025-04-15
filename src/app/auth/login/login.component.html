@@ -1,18 +1,32 @@
 @if(translation){
-<div class="flex items-center justify-center h-full">
-  <div class="bg-white p-5 rounded-2xl text-dark shadow-xl flex flex-col">
+<div class="flex items-center justify-center h-full px-8">
+  <div
+    class="bg-white dark:bg-dark p-5 rounded-2xl text-dark dark:text-snow shadow-xl dark:shadow-snow/5 w-full max-w-[450px] flex flex-col"
+  >
     <h2 class="text-2xl text-center">
       {{ translation.h2 | uppercase }}
     </h2>
     <p class="text-center">
       {{ translation["sub-title"] }}
     </p>
-    <form>
+    <form class="mt-5">
       <div class="flex flex-col">
         <label for="identifier">
           {{ translation.identifier }}
         </label>
-        <input type="text" id="identifier" class="" />
+        <input
+          type="text"
+          id="identifier"
+          class="w-full bg-dark/5 dark:bg-snow/10 px-4 py-3 rounded-md focus:outline-none focus:ring-1 focus:ring-dark"
+        />
+      </div>
+      <div class="flex flex-col">
+        <label for="password"> Password </label>
+        <input
+          type="password"
+          id="password"
+          class="w-full bg-dark/5 dark:bg-snow/10 px-4 py-3 rounded-md focus:outline-none focus:ring-1 focus:ring-dark"
+        />
       </div>
     </form>
   </div>
