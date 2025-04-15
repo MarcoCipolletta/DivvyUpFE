@@ -60,9 +60,6 @@ export abstract class GenericTranslateService<T> implements OnDestroy {
   }
 
   protected loadTranslationsForLang(lang: string): Observable<T> {
-    console.log(this.basePath);
-    console.log(lang);
-
     const url = `./i18n/${this.basePath}/${lang}.json`;
     return this.http.get<{ [key: string]: T }>(url).pipe(
       tap((data: { [key: string]: T }) => {

@@ -1,3 +1,4 @@
+@if(translation){
 <div class="flex flex-col hScreen">
   <app-navbar class="z-50 shadow-lg"></app-navbar>
   <div
@@ -7,19 +8,19 @@
       <h1
         class="text-[8.4vw] leading-8 min-[460px]:leading-10 min-[620px]:leading-12 min-[740px]:leading-15 min-[940px]:leading-18 min-[1120px]:leading-none dark:text-snow font-bold uppercase"
       >
-        {{ "home.title" | translate }}
+        {{ translation.title }}
       </h1>
       <p class="mt-2 mb-15 dark:text-snow/75 lg:text-xl">
-        {{ "home.sub_title" | translate }}
+        {{ translation.sub_title }}
       </p>
       <app-basic-button
-        text=" {{ 'home.button' | translate }}"
+        text=" {{ translation.button }}"
         routerLink="/auth"
       ></app-basic-button>
       <p class="dark:text-snow">
-        {{ "home.not_register" | translate }}
+        {{ translation.not_register }}
         <a routerLink="auth/register" class="text-seaGreen">{{
-          "home.link" | translate
+          translation.link
         }}</a
         >.
       </p>
@@ -27,3 +28,4 @@
   </div>
   <app-footer></app-footer>
 </div>
+}

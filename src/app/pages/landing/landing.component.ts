@@ -1,4 +1,4 @@
-import { LandingTranslateService } from './landing-translate.service';
+import { iHome, LandingTranslateService } from './landing-translate.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,7 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './landing.component.scss',
 })
 export class LandingComponent {
-  constructor(private landingTranslateSvc: LandingTranslateService) {
-    this.landingTranslateSvc.loadTranslations();
+  constructor(private landingTranslateSvc: LandingTranslateService) {}
+  translation!: iHome;
+  ngOnInit() {
+    this.landingTranslateSvc.translations$.subscribe((translations) => {
+      if (!translations) return;
+      this.translation = translations.home;
+    });
   }
 }

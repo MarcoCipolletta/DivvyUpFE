@@ -1,9 +1,11 @@
 {
-  "home": {
-    "title": "Split expenses? Easy, fast, transparent.",
-    "sub_title": "Log in now to easily manage all your shared expenses.",
-    "button": "Enter the app",
-    "not_register": "Don't have an account yet?",
-    "link": "Register now"
+  "landing": {
+    "home": {
+      "title": "Split expenses? Easy, fast, transparent.",
+      "sub_title": "Log in now to easily manage all your shared expenses.",
+      "button": "Enter the app",
+      "not_register": "Don't have an account yet?",
+      "link": "Register now"
+    }
   }
 }

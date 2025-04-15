@@ -1,39 +1,25 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
-import { Subscription } from 'rxjs';
+import { TranslateService } from '@ngx-translate/core';
+import { GenericTranslateService } from '../../services/translate/generic-translate.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class LandingTranslateService {
-  private langChangeSubscription: Subscription;
-
-  constructor(private translate: TranslateService, private http: HttpClient) {
-    // Sottoscrizione al cambio di lingua
-    this.langChangeSubscription = this.translate.onLangChange.subscribe(
-      (event: LangChangeEvent) => {
-        this.loadTranslationsForLang(event.lang);
-      }
-    );
+export class LandingTranslateService extends GenericTranslateService<iLanding> {
+  constructor(translate: TranslateService, http: HttpClient) {
+    super(translate, http, 'landing', 'landing');
   }
+}
 
-  loadTranslations() {
-    const lang = this.translate.currentLang || this.translate.getDefaultLang();
-    this.loadTranslationsForLang(lang);
-  }
+export interface iLanding {
+  home: iHome;
+}
 
-  private loadTranslationsForLang(lang: string) {
-    this.http
-      .get(`./i18n/landing/${lang}.json`)
-      .subscribe((translations: any) => {
-        this.translate.setTranslation(lang, translations, true);
-      });
-  }
-
-  ngOnDestroy() {
-    if (this.langChangeSubscription) {
-      this.langChangeSubscription.unsubscribe();
-    }
-  }
+export interface iHome {
+  title: string;
+  sub_title: string;
+  button: string;
+  not_register: string;
+  link: string;
 }
