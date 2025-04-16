@@ -13,26 +13,56 @@
         <input
           formControlName="identifier"
           type="text"
+          placeholder="mario.rossi"
           id="identifier"
           class="w-full bg-dark/5 dark:bg-snow/10 px-4 py-3 rounded-md focus:outline-none focus:ring-1 focus:ring-dark"
         />
       </div>
       <div class="flex flex-col">
         <label for="password"> Password </label>
-        <input
-          formControlName="password"
-          type="password"
-          id="password"
-          class="w-full bg-dark/5 dark:bg-snow/10 px-4 py-3 rounded-md focus:outline-none focus:ring-1 focus:ring-dark"
-        />
+        <div class="relative w-full">
+          <input
+            formControlName="password"
+            [type]="showPassword ? 'text' : 'password'"
+            [placeholder]="showPassword ? 'password' : '********'"
+            id="password"
+            class="w-full bg-dark/5 dark:bg-snow/10 px-4 py-3 rounded-md focus:outline-none focus:ring-1 focus:ring-dark"
+          />
+          <span
+            class="iconEye cursor-pointer text-seaGreen dark:text-[#006336]"
+            (click)="toggleShowPassword()"
+          >
+            <ng-icon
+              [name]="showPassword ? 'iconoirEye' : 'iconoirEyeClosed'"
+              size="1.25rem"
+            ></ng-icon>
+          </span>
+        </div>
+      </div>
+
+      <div class="flex justify-end mt-[-0.75rem]">
+        <a routerLink="/auth/forgot" class="text-sm hover:underline">{{
+          translation.forgot
+        }}</a>
       </div>
       <button
         type="submit"
-        class="rounded-md p-3 bg-seaGreen text-snow login cursor-pointer before:rounded-md"
+        class="rounded-md p-3 bg-seaGreen text-snow login cursor-pointer before:rounded-md disabled:pointer-events-none disabled:bg-seaGreen/50"
+        [disabled]="loginForm.invalid"
       >
         {{ translation.enter }}
       </button>
     </form>
+    <div class="flex justify-end mt-2">
+      <p class="text-sm">
+        {{ translation["not-register"].title }}
+        <a
+          routerLink="/auth/register"
+          class="text-seaGreen dark:text-[#006336] hover:underline"
+          >{{ translation["not-register"].link }}</a
+        >
+      </p>
+    </div>
 
     <div class="flex items-center my-3">
       <hr class="flex-grow" />

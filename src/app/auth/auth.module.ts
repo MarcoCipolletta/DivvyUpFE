@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { ContainerComponent } from './container/container.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgIconsModule } from '@ng-icons/core';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { NgIconsModule } from '@ng-icons/core';
     RegisterComponent,
     LoginComponent,
     ContainerComponent,
+    ForgotPasswordComponent,
   ],
   imports: [
     CommonModule,

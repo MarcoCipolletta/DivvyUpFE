@@ -12,6 +12,7 @@ import { NgIconsModule } from '@ng-icons/core';
 })
 export class LoginComponent implements OnInit {
   translation!: iLogin;
+  showPassword: boolean = false;
 
   loginForm = new FormGroup({
     identifier: new FormControl('', [Validators.required]),
@@ -36,5 +37,9 @@ export class LoginComponent implements OnInit {
       return;
     }
     console.log('Login');
+  }
+
+  toggleShowPassword() {
+    this.showPassword = !this.showPassword;
   }
 }
