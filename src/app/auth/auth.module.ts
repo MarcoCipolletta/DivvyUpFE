@@ -7,6 +7,9 @@ import { LoginOauthSuccessComponent } from './login-oauth-success/login-oauth-su
 import { RegisterComponent } from './register/register.component';
 import { MainComponentsModule } from '../shared/main-component/main-components.module';
 import { LoginComponent } from './login/login.component';
+import { ContainerComponent } from './container/container.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgIconsModule } from '@ng-icons/core';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,14 @@ import { LoginComponent } from './login/login.component';
     LoginOauthSuccessComponent,
     RegisterComponent,
     LoginComponent,
+    ContainerComponent,
   ],
-  imports: [CommonModule, AuthRoutingModule, MainComponentsModule],
+  imports: [
+    CommonModule,
+    AuthRoutingModule,
+    MainComponentsModule,
+    ReactiveFormsModule,
+    NgIconsModule,
+  ],
 })
 export class AuthModule {}

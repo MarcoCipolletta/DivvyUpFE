@@ -1,20 +1,17 @@
 @if(translation){
-<div class="flex items-center justify-center h-full px-8">
-  <div
-    class="bg-white dark:bg-dark p-5 rounded-2xl text-dark dark:text-snow shadow-xl dark:shadow-snow/5 w-full max-w-[450px] flex flex-col"
-  >
-    <h2 class="text-2xl text-center">
-      {{ translation.h2 | uppercase }}
-    </h2>
-    <p class="text-center">
-      {{ translation["sub-title"] }}
-    </p>
-    <form class="mt-5">
+<app-container [title]="translation.h2" [subTitle]="translation['sub-title']">
+  <ng-template>
+    <form
+      class="mt-5 flex flex-col gap-5"
+      [formGroup]="loginForm"
+      (ngSubmit)="login()"
+    >
       <div class="flex flex-col">
         <label for="identifier">
           {{ translation.identifier }}
         </label>
         <input
+          formControlName="identifier"
           type="text"
           id="identifier"
           class="w-full bg-dark/5 dark:bg-snow/10 px-4 py-3 rounded-md focus:outline-none focus:ring-1 focus:ring-dark"
@@ -23,12 +20,35 @@
       <div class="flex flex-col">
         <label for="password"> Password </label>
         <input
+          formControlName="password"
           type="password"
           id="password"
           class="w-full bg-dark/5 dark:bg-snow/10 px-4 py-3 rounded-md focus:outline-none focus:ring-1 focus:ring-dark"
         />
       </div>
+      <button
+        type="submit"
+        class="rounded-md p-3 bg-seaGreen text-snow hover:bg-seaGreen/85 cursor-pointer"
+      >
+        {{ translation.enter }}
+      </button>
     </form>
-  </div>
-</div>
+
+    <div class="flex items-center my-3">
+      <hr class="flex-grow" />
+      <p class="px-3">{{ translation.or }}</p>
+      <hr class="flex-grow" />
+    </div>
+
+    <button
+      class="rounded-md p-3 bg-[#DE4B3A] hover:bg-[#DE4B3A]/85 text-snow cursor-pointer"
+    >
+      <span class="flex gap-3 justify-center items-center"
+        ><ng-icon name="bootstrapGoogle"></ng-icon>
+        {{ translation.google }}</span
+      >
+    </button>
+  </ng-template>
+</app-container>
+
 }

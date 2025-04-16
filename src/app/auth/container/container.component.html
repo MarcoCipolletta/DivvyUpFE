@@ -1,0 +1,13 @@
+<div class="flex items-center justify-center h-full px-8">
+  <div
+    class="bg-white dark:bg-dark p-5 rounded-2xl text-dark dark:text-snow shadow-xl dark:shadow-snow/5 w-full max-w-[450px] flex flex-col"
+  >
+    <h2 class="text-2xl text-center">
+      {{ title | uppercase }}
+    </h2>
+    <p class="text-center">
+      {{ subTitle }}
+    </p>
+    <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+  </div>
+</div>
